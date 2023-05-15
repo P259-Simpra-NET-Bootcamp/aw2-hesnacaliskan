@@ -10,4 +10,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\SimpraWeek2Homework.Application\SimpraWeek2Homework.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\SimpraWeek2Homework.Persistence\SimpraWeek2Homework.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
