@@ -37,6 +37,10 @@ namespace SimpraWeek2Homework.API.Controllers
             [HttpPost]
             public async Task<IActionResult> Post(VM_Create_Staff model)
             {
+                if (ModelState.IsValid)
+                {
+
+                }
                 await _staffWriteRepository.AddAsync(new()
                 {                    
                     CreatedBy = model.CreatedBy,
@@ -51,7 +55,7 @@ namespace SimpraWeek2Homework.API.Controllers
                     Country = model.Country,
                     Province = model.Province,
 
-            });
+                });
                 await _staffWriteRepository.SaveAsync();
                 return StatusCode((int)HttpStatusCode.Created);
             }
@@ -59,6 +63,11 @@ namespace SimpraWeek2Homework.API.Controllers
             [HttpPut]
             public async Task<IActionResult> Put(VM_Update_Staff model)
             {
+                if (ModelState.IsValid)
+                {
+
+                }
+                
                 Staff staff = await _staffReadRepository.GetByIdAsync(model.Id);
                 staff.CreatedBy = model.CreatedBy;
                 staff.FirstName = model.FirstName;
@@ -81,6 +90,6 @@ namespace SimpraWeek2Homework.API.Controllers
                 await _staffWriteRepository.SaveAsync();
                 return Ok();
             }
-        }
+    }
     
 }

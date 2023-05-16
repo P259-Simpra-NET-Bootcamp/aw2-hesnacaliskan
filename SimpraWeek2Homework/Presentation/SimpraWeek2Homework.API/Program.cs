@@ -1,3 +1,6 @@
+using FluentValidation.AspNetCore;
+using SimpraWeek2Homework.Application.Validators.Staffs;
+using SimpraWeek2Homework.Infrastructure.Filters;
 using SimpraWeek2Homework.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddPersistenceServices();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
+    .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<CreateStaffValidator>())
+    .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<UpdateStaffValidator>())
+    .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
