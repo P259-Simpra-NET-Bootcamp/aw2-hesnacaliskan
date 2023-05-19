@@ -115,7 +115,7 @@ FluentValidation bir veri doğrulama kütüphanesidir. FluentValidation ve benze
 1. Öncelikle projeyi klonlamak istediğiniz dosyada terminali açınız ve aşağıdaki kodu yazınız.
 
 ```bash
-git clone [https://github.com/P259-Simpra-NET-Bootcamp/aw2-hesnacaliskan.git)
+git clone https://github.com/P259-Simpra-NET-Bootcamp/aw2-hesnacaliskan.git
 ```
 
 2. Projeyi cloneladıktan sonra Visual Studio programında açınız. Visual Studio Code programını kullananlar aşağıdaki kodu terminale yazarak da açabilirler.
