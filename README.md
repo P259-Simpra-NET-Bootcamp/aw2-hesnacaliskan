@@ -1,6 +1,6 @@
 # Hafta 2 Ödevi
 
-Simpra .Net Bootcamp'i kapsamında ikinci haftanın ödevi olarak bizden içerisinde GET,POST,PUT ve DELETE metotları bulunan bir Web API projesi yapmamız istendi. Bu proje Onion Architecture ve Generic Repository Design Pattern kullanılarak tasarlanmıştır. "Staff" adlı entity sınıfı oluşturulmuş, üzerinde CRUD işlemleri gerçekleştirilmiştir. Ek olarak GetWhere() metodu kullanılarak name ve country propertyleri üzerinden filtreleme yapılmıştır. Validation yöntemi olarak Fluent Validation tercih edilmiştir. Projenin yapısı aşağıdaki gibidir:
+Simpra .Net Bootcamp'i kapsamında ikinci haftanın ödevi olarak bizden içerisinde GET,POST,PUT ve DELETE metotları bulunan bir Web API projesi yapmamız istendi. Bu proje Onion Architecture ve Generic Repository Design Pattern kullanılarak tasarlanmıştır. "Staff" adlı entity sınıfı oluşturulmuş, üzerinde CRUD işlemleri gerçekleştirilmiştir. Ek olarak GetWhere() metodu ile name ve country propertyleri üzerinden filtreleme yapılmıştır. Validation yöntemi olarak Fluent Validation tercih edilmiştir. Projenin yapısı aşağıdaki gibidir:
 
 ![Ekran görüntüsü 2023-05-18 232602](https://github.com/P259-Simpra-NET-Bootcamp/aw2-hesnacaliskan/assets/56639245/ff056c6e-34e4-430d-a091-6df61fce33e8)
 
@@ -118,7 +118,7 @@ FluentValidation bir veri doğrulama kütüphanesidir. FluentValidation ve benze
 git clone [https://github.com/P259-Simpra-NET-Bootcamp/aw2-hesnacaliskan.git)
 ```
 
-2. Projeyi cloneladıktan sonra Visual Studio programında açınız. Visual Studio Code programını kullananlar aşağıdaki kodu kullanarak açabilirler.
+2. Projeyi cloneladıktan sonra Visual Studio programında açınız. Visual Studio Code programını kullananlar aşağıdaki kodu terminale yazarak da açabilirler.
 
 Linux için:
 ```linux
